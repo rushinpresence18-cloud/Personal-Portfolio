@@ -1,0 +1,186 @@
+/* =========================================
+   DESIGN SYSTEM — Rushin Presence Portfolio
+   Palette: Dark Navy + Blue Accent
+========================================= */
+
+:root {
+  /* Backgrounds */
+  --bg-dark:        #0a1628;
+  --bg-darker:      #060f1c;
+  --bg-card:        #0f2138;
+  --bg-card-hover:  #16293f;
+
+  /* Accents */
+  --accent-blue:    #2f7df6;
+  --accent-blue-2:  #1e5fd6;
+  --accent-blue-dim:#1e5fd633;
+
+  /* Text */
+  --text-primary:   #ffffff;
+  --text-body:      #b8c4d6;
+  --text-dim:       #6e7e94;
+
+  /* Lines & shadows */
+  --border:         rgba(47, 125, 246, 0.15);
+  --border-hover:   rgba(47, 125, 246, 0.45);
+  --shadow-blue:    0 10px 40px rgba(47, 125, 246, 0.25);
+
+  /* Layout */
+  --content-width:  1200px;
+  --radius-card:    12px;
+  --radius-btn:     6px;
+
+  /* Fonts */
+  --font-heading:   'Poppins', system-ui, -apple-system, sans-serif;
+  --font-body:      'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #app {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-body);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================
+   SECTION STRUCTURE
+========================================= */
+
+.section {
+  padding: 100px 24px;
+}
+
+.section-inner {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  color: var(--text-body);
+  max-width: 620px;
+  margin-bottom: 50px;
+  font-size: 1rem;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent-blue);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: var(--accent-blue-2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-blue);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-hover);
+}
+
+.btn-outline:hover {
+  background: var(--accent-blue-dim);
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   CARDS
+========================================= */
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 20px;
+  }
+}
